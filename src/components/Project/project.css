@@ -1,0 +1,129 @@
+.project-section {
+    margin-top: 195px;
+    text-align: center;
+  }
+  
+  .project-title {
+    font-size: calc(36px + (0.5vw));
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+  
+  .project-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 0 95px;
+  }
+  
+  .project-card {
+    width: calc(33.33% - 32px);
+    height: calc(350px + (5vw));
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+  
+  .project-image {
+    width: calc(100% - 100px);
+    height: 60%; 
+    /* width: 300px;
+    height: 200px; */
+    /* margin-top: 0; */
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #ccc; /* 替代圖片預設背景 */
+    align-self: center;
+  }
+  
+  .project-text {
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+  }
+  
+  .project-card-title {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 16px 10px;
+    margin: 0;
+  }
+  
+  .project-description {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 12px;
+  }
+  
+  .project-tech {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 32px;
+    width: 100%;
+    /* max-width: 320px; 你想限制的最大寬度，可調整 */
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+/* 1360px 以下 */
+@media (max-width: 1360px) {
+    .project-card {
+        width: calc(50% - 32px); /* 每行 2 張卡片 */
+    }
+    .project-image {
+        width: calc(100% - 100px); /* 左右各 50px 邊距 */
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+/* 760px 以下（中小屏幕） */
+@media (max-width: 760px) {
+    .project-card {
+        width: 100%; /* 每行 1 張卡片 */
+        height: auto; /* 自動調整高度 */
+    }
+    
+    .project-title {
+        font-size: calc(28px + (0.5vw)); /* 動態調整字體 */
+    }
+    
+    .project-cards {
+        padding: 0 10px; /* 增加內邊距 */
+    }
+    .project-image {
+        width: calc(100% - 80px); /* 左右各 40px 邊距，適應中小屏幕 */
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+/* 480px 以下（手機直向） */
+@media (max-width: 480px) {
+    .project-card {
+        width: 100%; /* 每行 1 張卡片 */
+        margin-bottom: 24px; /* 減少底部間距 */
+    }
+    
+    .project-title {
+        font-size: 24px;
+    }
+
+    .project-image {
+        width: calc(100% - 60px); /* 左右各 30px 邊距，適應手機屏幕 */
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}

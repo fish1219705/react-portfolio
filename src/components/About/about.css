@@ -1,0 +1,337 @@
+/* SECTION 容器 */
+.about-section {
+    margin-top: 195px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* MAIN 標題 */
+  .about-title {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  /* 內容區塊 */
+  .about-content-wrapper {
+    width: 650px;
+    margin-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Sub title */
+  .about-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+  }
+  
+  /* 段落 */
+  .about-paragraph {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 18px 0 0 0;
+    text-align: left;
+  }
+  
+
+  .skills-title {
+    margin-top: 40px; /* 距離上一區塊 */
+  }
+  
+  .skills-paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 1%;
+    margin-top: 18px;
+    text-align: left;
+  }
+  
+  .skill-category {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+
+  @media (max-width: 1360px) {
+    .about-section {
+        margin-top: 120px; /* 減少 top margin */
+    }
+
+    .about-title {
+        font-size: 32px; /* 小螢幕略小的字體 */
+    }
+
+    .about-content-wrapper {
+        width: 600px; /* 調整寬度 */
+        margin-top: 30px; /* 減少間距 */
+    }
+
+    .about-subtitle {
+        font-size: 22px; /* 小螢幕略小的字體 */
+    }
+
+    .about-paragraph {
+        font-size: 16px; /* 減小字體 */
+        line-height: 24px; /* 調整行高 */
+        margin: 16px 0 0 0;
+    }
+
+    .skills-title {
+        margin-top: 30px; /* 減少 top margin */
+    }
+
+    .skills-paragraph {
+        font-size: 14px; /* 減小字體 */
+        line-height: 24px; /* 調整行高 */
+        margin-top: 16px; /* 調整間距 */
+    }
+
+    .skill-category {
+        font-size: 16px; /* 減小字體 */
+    }
+}
+
+/* 小於 760px */
+@media (max-width: 760px) {
+    .about-section {
+        margin-top: 90px; /* 更小的 top margin */
+        padding-left: 40px; /* 增加左邊的 padding */
+        padding-right: 40px; /* 增加右邊的 padding */
+    }
+
+    .about-title {
+        font-size: 28px; /* 更小的字體 */
+    }
+
+    .about-content-wrapper {
+        width: 100%; /* 占滿寬度 */
+        margin-top: 20px;
+        padding: 0 20px; /* 增加左右邊距 */
+    }
+
+    .about-subtitle {
+        font-size: 20px; /* 小字體 */
+    }
+
+    .about-paragraph {
+        font-size: 14px; /* 更小字體 */
+        line-height: 22px; /* 更小行高 */
+        margin: 14px 0 0 0;
+    }
+
+    .skills-title {
+        margin-top: 24px; /* 減少 top margin */
+    }
+
+    .skills-paragraph {
+        font-size: 12px; /* 更小字體 */
+        line-height: 22px; /* 更小行高 */
+        margin-top: 12px; /* 調整間距 */
+    }
+
+    .skill-category {
+        font-size: 14px; /* 更小字體 */
+    }
+}
+
+/* 小於 480px */
+@media (max-width: 480px) {
+    .about-section {
+        margin-top: 60px; /* 更小的 top margin */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about-title {
+        font-size: 24px; /* 超小字體 */
+    }
+
+    .about-content-wrapper {
+        width: 100%; /* 占滿寬度 */
+        margin-top: 20px;
+        padding: 0 15px; /* 更小的邊距 */
+    }
+
+    .about-subtitle {
+        font-size: 18px; /* 小字體 */
+    }
+
+    .about-paragraph {
+        font-size: 12px; /* 更小字體 */
+        line-height: 20px; /* 更小行高 */
+        margin: 12px 0 0 0;
+    }
+
+    .skills-title {
+        margin-top: 20px; /* 更小的 top margin */
+    }
+
+    .skills-paragraph {
+        font-size: 10px; /* 更小字體 */
+        line-height: 20px; /* 更小行高 */
+        margin-top: 10px; /* 更小間距 */
+    }
+
+    .skill-category {
+        font-size: 12px; /* 更小字體 */
+    }
+}
+
+/* 技能圖標區塊容器 */
+.skills-icons-wrapper {
+    max-width: 650px;
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-left: 0;
+  }
+  
+  /* 單個圖標樣式 */
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+    /* margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+
+  
+.skill-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+  
+  /* ========== 響應式設計 ========== */
+  
+  /* 1360px 以下：每行 8 個圖標 */
+  @media (max-width: 1360px) {
+    .skills-icons-wrapper {
+      display: grid;
+      max-width: 520px;
+      grid-template-columns: repeat(8, 40px);
+      grid-gap: 16px;
+      max-width: 100%; /* 容器最大寬度為 100% */
+      width: 100%; /* 保證容器寬度為 100% */
+      margin-left: auto;
+      margin-right: auto; /* 保證容器水平方向居中 */
+      justify-items: center; /* 保證每個圖標在格子內居中 */
+    }
+  }
+  
+  /* 760px 以下：每行 5 個圖標 */
+  @media (max-width: 760px) {
+    .skills-icons-wrapper {
+      /* max-width: 300px; */
+      display: grid;
+      grid-template-columns: repeat(5, 40px);
+      grid-gap: 20px;
+      margin-top: 55px;
+      justify-items: center; /* 保證每個圖標在格子內居中 */
+      justify-content: center; /* 保證整個圖標區域居中 */
+      width: 100%; /* 使容器寬度自適應 */
+      max-width: 1000px; /* 這個可以根據需要調整 */
+      margin-left: auto;
+      margin-right: auto; /* 保證容器在頁面上居中 */
+
+
+    }
+  }
+  
+  /* 480px 以下：每行 4 個圖標 */
+  @media (max-width: 480px) {
+    .skills-icons-wrapper {
+      /* max-width: 240px; */
+      grid-template-columns: repeat(4, 40px);
+      grid-gap: 20px;
+      margin-top: 55px;
+      display: grid; /* 使用 flexbox 來控制居中 */
+      justify-content: center; /* 保證居中 */
+      grid-auto-rows: 40px;
+      justify-items: center; 
+      width: 100%;
+ 
+      margin-left: auto;
+      margin-right: auto; /* 保證容器在頁面上居中 */
+    }
+  }
+  
+
+  .contact-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 0 5%; /* 預留左右空間 */
+  }
+
+  .contact-link {
+  width: 320px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.5%;
+  color: #666666;
+  text-decoration: none;
+  padding: 10px 21px;
+  border: 1px solid rgba(102, 102, 102, 0.6);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  white-space: nowrap; /* 防止換行 */
+}
+
+.contact-link:hover {
+  background-color: rgba(102, 102, 102, 0.05); /* 微微灰底 */
+  border-color: rgba(102, 102, 102, 0.8);      /* 邊框稍深 */
+  color: #333333; /* 字體變深一點點 */
+  cursor: pointer;
+}
+
+/* === 響應式調整 === */
+
+/* 桌機，最大到 1360px */
+@media (max-width: 1360px) {
+  .contact-link {
+    width: 280px;
+  }
+}
+
+/* 平板橫向與直向 */
+@media (max-width: 760px) {
+  .contact-link {
+    width: 100%;
+    max-width: 260px;
+    font-size: 14px;
+  }
+}
+
+/* 手機 */
+@media (max-width: 480px) {
+  .contact-link {
+    width: 100%;
+    max-width: 220px;
+    font-size: 12px;
+    padding: 8px 18px;
+  }
+}

@@ -1,0 +1,60 @@
+/* Footer容器 */
+.footer-container {
+    margin-top: 95px;
+    text-align: center; 
+    margin-bottom: 40px;
+  }
+  
+  /* Footer中的直線 */
+  .footer-line {
+    border: none;
+    height: 1px;
+    background-color: #E0E0E0; /* 顏色 E0E0E0 */
+    margin-bottom: 40px; 
+    width: 100%; /* 貫穿整個屏幕 */
+  }
+  
+  /* Footer內容 */
+  .footer-content {
+    font-weight: 300; /* 使用 light 字體 */
+    font-size: 12px;
+    line-height: auto;
+    color: #666; 
+  }
+  
+
+
+/* 響應式設置 */
+@media (max-width: 1360px) {
+  .footer-content {
+    font-size: 11px; /* 在較小螢幕下稍微調整字體大小 */
+  }
+}
+
+@media (max-width: 760px) {
+  .footer-container {
+    margin-top: 70px; /* 在較小的屏幕上稍微減小margin-top */
+    margin-bottom: 30px; /* 減小底部間距 */
+  }
+
+  .footer-content {
+    font-size: 10px; /* 調整字體大小以適應螢幕 */
+  }
+  .footer-line {
+    margin-bottom: 30px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    margin-top: 50px; /* 更小螢幕減小間距 */
+    margin-bottom: 20px;
+  }
+
+  .footer-content {
+    font-size: 9px; /* 更小的字體 */
+  }
+  .footer-line {
+    margin-bottom: 20px; 
+  }
+}
