@@ -6,7 +6,7 @@ return (
     <header id="header">
       <nav>
         <a href="#work" className="link">WORK</a>
-        <img src="../public/images/icon.png" alt="website icon" className="icon" />
+        <img src="/images/icon.png" alt="website icon" className="icon" />
         <a href="#about" className="link">ABOUT</a>
       </nav>
     </header>

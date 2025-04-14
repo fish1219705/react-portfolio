@@ -1,4 +1,5 @@
 import './about.css'
+import SkillParagraphs from '../Skill';
 export default function About() {
 
     const skillImages = [
@@ -43,8 +44,6 @@ export default function About() {
         { name: "Raspberry Pi", src: "/images/raspbery.png" },
         
         
-       
-        // 繼續填滿到 40 個...
       ];
     return (
         <section className="about-section" id="about">
@@ -61,7 +60,9 @@ export default function About() {
             Technology should serve people - and I make sure it does.
           </p>
           <h3 className="about-subtitle skills-title">Skills</h3>
-            <div className="skills-paragraph">
+
+            <SkillParagraphs />
+            {/* <div className="skills-paragraph">
             <p><span className="skill-category">Front-End</span><br />
             HTML, CSS, JavaScript, React, jQuery, TypeScript, Bootstrap, Tailwind CSS, Responsive Design, Web Design, Web Accessibility</p>
 
@@ -70,8 +71,8 @@ export default function About() {
 
             <p><span className="skill-category">Tools</span><br />
             Git, GitHub, Next.js, Firebase, Docker, npm, Visual Studio, VS Code, Powershell<br />
-            UX/UI Design: Figma, Miro, Prototyping, Wireframing</p>
-            </div>
+            UX/UI Design: Figma, Miro</p>
+            </div> */}
 
             <div className="skills-icons-wrapper">
             {skillImages.map((skill, index) => (

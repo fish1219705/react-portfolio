@@ -315,6 +315,9 @@
   .contact-link {
     width: 280px;
   }
+  .contact-wrapper {
+    padding: 0 10%;
+  }
 }
 
 /* 平板橫向與直向 */
@@ -323,6 +326,9 @@
     width: 100%;
     max-width: 260px;
     font-size: 14px;
+  }
+  .contact-wrapper {
+    padding: 0 10%;
   }
 }
 
@@ -333,5 +339,8 @@
     max-width: 220px;
     font-size: 12px;
     padding: 8px 18px;
+  }
+  .contact-wrapper {
+    padding: 0 10%;
   }
 }

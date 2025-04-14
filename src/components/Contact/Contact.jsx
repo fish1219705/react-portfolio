@@ -21,7 +21,7 @@ const Contact = () => {
             </div>
             <div className="contact-row">
                 <span className="contact-label">Resume</span>
-                <a className="contact-content resume-link" href="/your-resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a className="contact-content resume-link" href="/Brynne Han_Resume.pdf" target="_blank" rel="noopener noreferrer">
                 View Resume →
                 </a>
             </div>
