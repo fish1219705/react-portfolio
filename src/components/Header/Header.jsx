@@ -34,19 +34,19 @@ return (
   <>
     <header id="header">
       <nav>
-      <div class="nav-section left">
+      <div className="nav-section left">
         <a href="#work" 
         className={`link ${activeSection === 'work' ? 'active' : ''}`}
         >
           WORK
           </a>
         </div>
-        <div class="nav-section center">
+        <div className="nav-section center">
           <a href="#">
           <img src="/images/icon.png" alt="website icon" className="icon" />
           </a>
         </div>
-        <div class="nav-section right">
+        <div className="nav-section right">
         <a href="#about"
         className={`link ${activeSection === 'about' ? 'active' : ''}`}
         >
