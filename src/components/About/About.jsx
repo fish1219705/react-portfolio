@@ -85,7 +85,7 @@ export default function About() {
         </div>
         <div className="contact-wrapper">
             <a href="#contact" className="contact-link">
-                {`>> /* Get in touch to collaborate */`}
+              {`$ > getInTouch(); // collaborate!`}
             </a>
         </div>
        

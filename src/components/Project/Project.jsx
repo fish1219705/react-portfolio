@@ -23,7 +23,16 @@ const ProjectLists = () => {
       <h2 className="project-title">Projects</h2>
        {/* 👇 顯示 Loading 訊息 */}
        {loading ? (
-        <p>Loading projects from personal api....</p>
+        <p>
+        Loading projects from personal API...<br />
+        It might take a while...<br />
+        <em>
+          But while you wait, here's something about me outside of work!<br /><br />
+          <strong>Tags:</strong> dessert master, animal lover, earth lover, cleaning enthusiast.<br />
+          <strong>Subjects I love:</strong> Biology, geography, chemistry - and favorite part of philosophy is political philosophy.<br />
+          <strong>Something else?</strong> It's hard to describe myself, but... I believe I have so much magic even I can't predict my full potential.
+        </em>
+      </p>
       ) : (
       <div className="project-cards">
         {projects.map((project) => (

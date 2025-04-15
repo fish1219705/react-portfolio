@@ -39,7 +39,19 @@ const SkillParagraphs = () => {
   return (
     <div className="skills-paragraph">
       {loading ? (
-        <p>Loading skills from personal api...</p>
+        <p>
+          Loading skills from personal API...<br />
+          It might take a while...<br /><br />
+        <em>
+          more about me? <br /><br />
+          I used to dream of being an animal keeper,<br />
+          but grew to dislike zoos - animals deserve freedom.<br /><br />
+          I care about saving water,<br />
+          but I also love keeping things clean...<br />
+          tough combo, right?
+        </em>
+          
+        </p>
       ) : (
     <>
       <p>
