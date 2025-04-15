@@ -134,7 +134,7 @@
     }
 
     .skills-paragraph {
-        font-size: 12px; /* 更小字體 */
+        font-size: 14px; /* 更小字體 */
         line-height: 22px; /* 更小行高 */
         margin-top: 12px; /* 調整間距 */
     }
@@ -177,7 +177,7 @@
     }
 
     .skills-paragraph {
-        font-size: 10px; /* 更小字體 */
+        font-size: 12px; /* 更小字體 */
         line-height: 20px; /* 更小行高 */
         margin-top: 10px; /* 更小間距 */
     }
