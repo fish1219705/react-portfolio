@@ -1,118 +1,129 @@
-/* 整个 Hero 区域，水平居中内容 */
-.hero  {
-    width: 545px;               /* 在 1440px 宽度屏幕下固定 545px */
-    margin: calc(1440px * 0.066) auto 0 auto;             
-    text-align: center;
-       
-}
-  
-  /* 主标题 */
-.hero-title {
-    font-size: 56px;
-    font-weight: 600;           /* semi-bold，如果想要更粗可以改成 700 */
-    margin: 0;                  /* 清除默认 margin */
-    padding: 0;                 /* 清除默认 padding */
-}
-  
-  /* 副标题 */
-.hero-subtitle {
-    font-size: 32px;
-    font-weight: 600;           /* semi-bold */
-    margin: 45px 0 0;           /* 距离标题 35px，底部和左右都是 0 */
-    padding: 0;
-}
-  
-  /* CTA 按钮 */
-.hero-cta {
-    display: inline-flex;         
-    align-items: center;          /* 垂直居中 */
-    justify-content: center;       /* 使 padding 生效 */
-    width: 220px;               /* 固定宽度 */
-    height: 48px;               /* 固定高度 */
-    /* line-height: 48px;*/
-    font-size: 16px;
-    font-weight: 500;           
-    /* padding: 10px; */        /* 移除原有 padding，改用宽高和 line-height */
-    background-color: #1C1C1E;
-    color: #ffffff;
-    border-radius: 10px;
-    margin-top: 95px;           /* 与副标题保持 35px 间距 */
-    text-align: center;         /* 文字水平居中 */
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.3s, color 0.3s;
-    border: 2px solid #1C1C1E;
-    text-decoration: none;
-}
-  
-.hero-cta:hover {
-    transform: scale(1.05);
-    background-color: #ffffff;  /* 背景变白 */
-    color: #1C1C1E;            /* 文字变黑 */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 545px;
+  min-height: calc(100vh - 80px);
+  margin: 80px auto 0 auto; /* margin-top 等於 header 高度 */
+  text-align: center;
+  padding: 10px 0;
+  box-sizing: border-box;
 }
 
+.hero-title {
+  font-size: 56px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-subtitle {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 45px 0 0;
+  padding: 0;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #1C1C1E;
+  color: #ffffff;
+  border-radius: 10px;
+  margin-top: 95px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s, color 0.3s;
+  border: 2px solid #1C1C1E;
+  text-decoration: none;
+}
+
+.hero-cta:hover {
+  transform: scale(1.05);
+  background-color: #ffffff;
+  color: #1C1C1E;
+}
 
 @media (max-width: 1360px) {
-    .hero {
-      width: calc(100vw * 0.40);
-      margin-top: calc(100vw * 0.066);
-    }
-  
-    .hero-title {
-      font-size: calc(100vw * 0.0389);
-    }
-  
-    .hero-subtitle {
-      font-size: calc(100vw * 0.0222);
-      margin-top: calc(100vw * 0.0243); /* 原本35px */
-    }
-  
-    .hero-cta {
-      width: calc(100vw * 0.153);
-      height: calc(100vw * 0.0333);
-      font-size: calc(100vw * 0.0111);
-      margin-top: calc(100vw * 0.032);
-    }
+  .hero {
+    max-width: 500px;
+    min-height: calc(100vh - 80px);
+    margin-top: 80px;
+    padding: 15px 0;
   }
-  
-  /* 760 以下（中小螢幕，手機橫向、小平板） */
-  @media (max-width: 760px) {
-    .hero {
-      width: 90%;
-      margin-top: 60px;
-    }
-  
-    .hero-title {
-      font-size: 36px;
-    }
-  
-    .hero-subtitle {
-      font-size: 22px;
-      margin-top: 25px;
-    }
-  
-    .hero-cta {
-      width: 180px;
-      height: 44px;
-      font-size: 15px;
-      margin-top: 35px;
-    }
+
+  .hero-title {
+    font-size: 48px;
   }
-  
-  /* 480 以下（手機直向） */
-  @media (max-width: 480px) {
-    .hero-title {
-      font-size: 28px;
-    }
-  
-    .hero-subtitle {
-      font-size: 18px;
-      margin-top: 25px;
-    }
-  
-    .hero-cta {
-      width: 160px;
-      height: 42px;
-      font-size: 14px;
-      margin-top: 57px;
-    }
+
+  .hero-subtitle {
+    font-size: 28px;
+    margin-top: 40px;
   }
+
+  .hero-cta {
+    width: 200px;
+    height: 46px;
+    font-size: 15px;
+    margin-top: 80px;
+}
+
+}
+
+@media (max-width: 760px) {
+  .hero {
+    max-width: 90%;
+    min-height: calc(100vh - 120px); /* 假設 header 高度約 150px */
+    margin-top: 120px; /* 配合 header 高度 */
+    padding: 5px 0;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 22px;
+    margin-top: 30px;
+  }
+
+  .hero-cta {
+    width: 180px;
+    height: 44px;
+    font-size: 15px;
+    margin-top: 60px;
+  }
+
+}
+
+@media(max-width: 480px) {
+  .hero {
+    max-width: 90%;
+    min-height: calc(100vh - 100px); /* 假設 header 高度約 130px */
+    margin-top: 100px; /* 配合更小的 header 高度 */
+    padding: 10px 0;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+
+  .hero-cta {
+    width: 160px;
+    height: 42px;
+    font-size: 14px;
+    margin-top: 50px;
+  }
+}

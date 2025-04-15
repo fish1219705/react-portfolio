@@ -1,65 +1,176 @@
 header {
-    background-color: #ffffff; /* 可以根據需要更改顏色 */
-    padding-top: calc(100vw * (55 / 1440));
-    padding-left: calc(100vw * (55 / 1440));
-    padding-right: calc(100vw * (55 / 1440));
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04); /* 很淡的陰影，極簡風格 */
+  display: flex;
+  justify-content: center; /* 确保 header 内部内容居中 */
 }
   
 nav {
-    position: relative;
-    width: 100%;
-    max-width: 1440px;      /* 如果你想限制最大值，可设为 1440px */
-    margin: 0 auto;         /* 居中大屏下的最大宽度 */
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-/* 图标保持 flex 中心 */
-.icon {
-    width: 80px;
-    height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100px;
+  width: 100%;
+  padding-left: 20px; /* 添加内边距保证居中 */
+  padding-right: 20px;
 }
 
-/* 链接绝对定位到左右中心 */
+.nav-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.nav-section.center {
+  justify-content: center;
+}
+
+.nav-section.left,
+.nav-section.right {
+  justify-content: flex-start;
+}
+
+.nav-section.right {
+  justify-content: flex-end;
+}
+
 .link {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    color: #333;
-    padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  /* display: block;   */
+  object-fit: contain;
+  
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+
+
+.link {
+  white-space: nowrap; /* 防止自動換行 */
+}
+
+.link {
+  position: static; /* 拿掉絕對定位 */
+  transform: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  transition: color 0.2s ease;
+}
+
+/* .icon {
+  width: 80px;
+  height: 80px;
+  margin-top: -50px; 如果需要微調 
+} */
+
+.link.active {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  color: #000;
+}
+.link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* 控制與文字間距 */
+  width: 100%;
+  height: 2px;
+  /* background-color: #000; */
+  transition: width 0.3s ease;
 }
   
   /* 左侧 Work */
-.link[href="#work"] {
+/* .link[href="#work"] {
     left: 0;
 }
-  
+   */
   /* 右侧 About */
-.link[href="#about"] {
+/* .link[href="#about"] {
     right: 0;
-}
+} */
 
 .link:hover {
     color: #111111; /* 深色強調 */
 }
 
-  /* Breakpoint: max-width 1360px — 調整 padding 比例 */
-  @media (max-width: 1360px) {
-    header {
-      padding-left: calc(100vw * (40 / 1440));
-      padding-right: calc(100vw * (40 / 1440));
-      padding-top: calc(100vw * (40 / 1440));
-    }
+/* Breakpoint at 1360px */
+@media (max-width: 1360px) {
+  nav {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
-/* Breakpoint: max-width 760px — 對應手機、橫屏 */
+  .link {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+  
+/* Breakpoint at 760px */
 @media (max-width: 760px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 8px;
+    padding: 12px 0;
+    width: 100%;
+  }
+
+  .nav-section {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-section.left,
+  .nav-section.right {
+    justify-content: center;
+  }
+
+  .link {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    margin: 8px 0;
+  }
+}
+
+
+
+/* @media (max-width: 760px) {
     nav {
       flex-direction: column;
       justify-content: center;
@@ -67,11 +178,13 @@ nav {
       height: auto;
       gap: 8px;
       padding: 12px 0;
+      width: 100%;
     }
   
     .icon {
       width: 60px;
       height: 60px;
+      margin-top: 0;
     }
   
     .link {
@@ -82,18 +195,19 @@ nav {
     }
   }
   
-  /* Breakpoint: max-width 480px — 超小手機螢幕 */
+  
   @media (max-width: 480px) {
     .icon {
       width: 48px;
       height: 48px;
+      margin-top: 0;
     }
   
     .link {
       font-size: 14px;
       padding: 4px 10px;
     }
-  }
+  } */
   
 
   
