@@ -8,7 +8,7 @@ export default function Hero() {
         Hi, I am Peiyu Han.
       </h1>
       <p className="hero-subtitle">
-        I build simple, clean websites.
+        I build streamlined, clean websites.
       </p>
       <a href="#work" className="hero-cta">See My Work</a>
     </section>
