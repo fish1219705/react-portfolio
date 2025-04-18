@@ -1,12 +1,20 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## link: https://react-portfolio-omega-seven-27.vercel.app/
 
-Currently, two official plugins are available:
+### will refine
+    - Add top padding for the project image.
+    - Change the image to something simpler — not too much text.
+    - When clicking "Work," scroll smoothly to the section instead of jumping instantly.
+    - Reduce the empty space above the About section.
+    - Move the "Get in Touch" button above the "See My Work" section.
+    - Make the icon's name font size larger.
+    - Reduce the top padding of the icons by half.
+    - "Work" and "About" move closer to icon.
+    - Either use a full border style with no grey background, or no border with only a grey background.
+    - Wrap both the image and title inside an <a> tag.
+    - Add a "Back to Top" button.
+    - If you're switching to a contact form, you can remove the contact info. if don't move，center the section, because the right side is too empty.
+    - Change the LinkedIn and GitHub links into icons.
+    - Embed Adam’s iframe of github contribution.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
