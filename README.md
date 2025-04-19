@@ -3,6 +3,7 @@
 ## link: https://react-portfolio-omega-seven-27.vercel.app/
 
 ### will refine
+    - dark mode
     - Add top padding for the project image.
     - Change the image to something simpler — not too much text.
     - When clicking "Work," scroll smoothly to the section instead of jumping instantly.
